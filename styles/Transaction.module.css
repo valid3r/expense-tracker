@@ -1,0 +1,49 @@
+.transaction_wrapper {
+  margin-top: 40px;
+  min-width: 400px;
+  --background-color: red;
+  padding: 0px;
+}
+
+.hr {
+  margin-bottom: 16px;
+}
+
+.transaction_input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+.transaction_input:focus-within {
+  --border-color: lightgrey;
+  outline-color: rgb(106, 199, 242);
+}
+
+.transaction_title {
+  margin-bottom: 10px;
+}
+
+.transaction_button {
+  margin-top: 3ch;
+  width: 100%;
+  border: 1px solid lightgrey;
+  padding: 14px;
+  background-color: #7945df;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.transaction_button:hover {
+  background-color: #6d33e0;
+  --transform: translateY(2px);
+}
+
+.transaction_button:active {
+  background-color: #520ae2;
+  transform: translateY(2px);
+}

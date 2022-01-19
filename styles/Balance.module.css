@@ -1,0 +1,48 @@
+.balance_wrapper {
+  margin-top: 30px;
+  min-width: 400px;
+  --background-color: red;
+  padding: 0px;
+}
+
+.title {
+  color: #666666;
+  text-transform: uppercase;
+}
+
+.price {
+  font-size: 40px;
+}
+
+.card {
+  margin-top: 16px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  display: flex;
+  padding: 15px;
+  justify-content: space-evenly;
+}
+
+.card_item {
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card_spacer {
+  background-color: lightgrey;
+  width: 1px;
+  height: 100%px;
+}
+
+.card_item_income {
+  color: rgb(24, 214, 24);
+}
+
+.card_item_expense {
+  color: rgb(214, 24, 24);
+}

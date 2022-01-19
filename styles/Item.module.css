@@ -1,0 +1,11 @@
+.item_wrapper {
+  --min-width: 400px;
+  display: flex;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  border-right: 4px solid lightgreen;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  box-shadow: 0px 1px 0px 0px #b5b5b5;
+}

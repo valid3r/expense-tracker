@@ -1,0 +1,10 @@
+.history_main {
+  margin-top: 40px;
+  min-width: 400px;
+  --background-color: red;
+  padding: 0px;
+}
+
+.hr {
+  margin-bottom: 16px;
+}
