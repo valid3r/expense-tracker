@@ -17,7 +17,6 @@
 }
 
 .transaction_input:focus-within {
-  --border-color: lightgrey;
   outline-color: rgb(106, 199, 242);
 }
 
@@ -40,7 +39,6 @@
 
 .transaction_button:hover {
   background-color: #6d33e0;
-  --transform: translateY(2px);
 }
 
 .transaction_button:active {
