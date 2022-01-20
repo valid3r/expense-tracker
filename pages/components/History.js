@@ -5,6 +5,8 @@ import Item from "./Item";
 
 const History = () => {
   const { transactions } = useTest();
+  console.log("transactions: ", transactions);
+
   const renderTransactions = () => {
     if (transactions.length > 0) {
       return (

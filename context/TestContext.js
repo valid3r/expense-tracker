@@ -15,8 +15,10 @@ const TestContext = createContext({
 const TestContextProvider = ({ children }) => {
   // Global - Variables - Functions, Whatever
 
-  const initialTransactions = [{ id: 1, title: "Test Car", amount: -15 }];
-  const [transactions, setTransactions] = useState(initialTransactions);
+  // Not really needed
+  const initialTransactions = [{}];
+
+  const [transactions, setTransactions] = useState([]);
 
   const [amounts, setAmounts] = useState(
     transactions.map((transaction) => transaction.amount)
