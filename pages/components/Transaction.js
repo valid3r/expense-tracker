@@ -8,12 +8,11 @@ const Transaction = () => {
   const { sayHello, addTransaction } = useTest();
 
   const handleSubmit = () => {
-    console.log("Item: ", item);
-    console.log("Amount: ", amount);
+    // console.log("Item: ", item);
+    // console.log("Amount: ", amount);
 
     const newTransaction = { title: item, amount: amount };
     addTransaction(newTransaction);
-    // sayHello(3);
 
     // Clear
     setAmount("");

@@ -1,11 +1,20 @@
 import React, { useState, createContext, useEffect } from "react";
 
-// Create Context
-const TestContext = createContext();
+// Create Context - Define variables and their types, to be exported
+const TestContext = createContext({
+  transactions: {},
+  sayHello: () => {},
+  addTransaction: () => {},
+  total: Number,
+  income: Number,
+  expense: Number,
+  amounts: [],
+});
 
-// Create Context Provider - Accept Children
+// Create Context Provider - Accepts Children
 const TestContextProvider = ({ children }) => {
-  // Global
+  // Global - Variables - Functions, Whatever
+
   const initialTransactions = [{ id: 1, title: "Test Car", amount: -15 }];
   const [transactions, setTransactions] = useState(initialTransactions);
 

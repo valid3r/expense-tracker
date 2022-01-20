@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from "react";
-import { TestContext } from "../../context/TestContext";
 import styles from "../../styles/Balance.module.css";
+import useTest from "../../hooks/useTest";
 
 const Balance = () => {
-  const { income, expense, total } = useContext(TestContext);
+  const { income, expense, total } = useTest();
 
   return (
     <div className={styles.balance_wrapper}>
