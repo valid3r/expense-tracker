@@ -1,17 +1,23 @@
-import React, { useRef, useEffect, forwardRef } from "react";
+import React, { useState, useContext } from "react";
 import styles from "../../styles/Transaction.module.css";
+import useTest from "../../hooks/useTest";
 
-const Transaction = ({ setItem }) => {
-  const itemRef = useRef();
-  const amountRef = useRef();
+const Transaction = () => {
+  const [item, setItem] = useState("");
+  const [amount, setAmount] = useState("");
+  const { sayHello, addTransaction } = useTest();
 
-  const handleChange = () => {
-    // Call setItem
-    setItem({ title: itemRef.current.value, amount: amountRef.current.value });
+  const handleSubmit = () => {
+    console.log("Item: ", item);
+    console.log("Amount: ", amount);
+
+    const newTransaction = { title: item, amount: amount };
+    addTransaction(newTransaction);
+    // sayHello(3);
 
     // Clear
-    itemRef.current.value = "";
-    amountRef.current.value = "";
+    setAmount("");
+    setItem("");
   };
 
   return (
@@ -21,19 +27,25 @@ const Transaction = ({ setItem }) => {
       <h4 className={styles.transaction_title}>Item</h4>
       <input
         type="Item"
-        ref={itemRef}
+        value={item}
+        onChange={(e) => {
+          setItem(e.target.value);
+        }}
         placeholder="Car, Book, Camera"
         className={styles.transaction_input}
       />
       <h4 className={styles.transaction_title}>Amount</h4>
       <input
         type="number"
-        ref={amountRef}
+        value={amount}
+        onChange={(e) => {
+          setAmount(e.target.value);
+        }}
         placeholder="Enter amount..."
         className={styles.transaction_input}
       />
 
-      <button onClick={handleChange} className={styles.transaction_button}>
+      <button onClick={handleSubmit} className={styles.transaction_button}>
         Add Transaction
       </button>
     </div>

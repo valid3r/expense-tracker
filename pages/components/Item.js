@@ -6,14 +6,14 @@ const Item = ({ title, amount }) => {
     return (
       <div className={styles.item_wrapper_positive}>
         <span>{title}</span>
-        <span>{amount}</span>
+        <span>+{Math.abs(amount)} €</span>
       </div>
     );
   } else {
     return (
       <div className={styles.item_wrapper_negative}>
         <span>{title}</span>
-        <span>{amount}</span>
+        <span>-{Math.abs(amount)} €</span>
       </div>
     );
   }
